@@ -1,7 +1,12 @@
-import Image from 'next/image'
+import Header from '@/components/Header';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="text-green-500">Hello Spotify App</div>
-  )
+    <>
+      <div className="w-full h-full overflow-hidden overflow-y-auto rounded-lg bg-neutral-900">
+        {/* <Header /> */}
+      </div>
+    </>
+  );
 }
