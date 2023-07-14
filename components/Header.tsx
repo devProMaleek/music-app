@@ -6,6 +6,7 @@ import { RxCaretLeft, RxCaretRight } from 'react-icons/rx';
 import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 import Button from './Button';
+import useAuthModal from '@/hooks/useAuthModal';
 
 type Props = {
   children: ReactNode;
@@ -14,6 +15,7 @@ type Props = {
 
 const Header = ({ children, className }: Props) => {
   const router = useRouter();
+  const { onOpen } = useAuthModal()
 
   const handleLogout = () => {};
   return (
@@ -45,12 +47,12 @@ const Header = ({ children, className }: Props) => {
           <div className="flex items-center justify-between gap-x-4">
             <>
               <div>
-                <Button onClick={() => {}} className="font-semibold bg-transparent text-neutral-300">
+                <Button onClick={onOpen} className="font-semibold bg-transparent text-neutral-300">
                   SignUp
                 </Button>
               </div>
               <div>
-                <Button onClick={() => {}} className="px-6 py-2 bg-white ">
+                <Button onClick={onOpen} className="px-6 py-2 bg-white ">
                   Login
                 </Button>
               </div>
