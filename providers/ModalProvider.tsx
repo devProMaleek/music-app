@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import Modal from "@/components/Modal";
+import AuthModal from "@/components/AuthModal";
  
 interface ModalProviderProps {
 }
@@ -20,7 +20,7 @@ export default function ModalProvider({}:ModalProviderProps) {
 
   return (
     <>
-     <Modall />
+     <AuthModal />
     </>
   );
 }
